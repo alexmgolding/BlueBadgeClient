@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./components/images/bbq.jpg");
+  background-size: cover; 
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.carousel {
+  max-width: 100%;
+}
+
+.home-div {
+  align-self: center;
+}
+
+.home-jumbo {
+  background-color: transparent;
+}
+
+.recipeIndexBackground {
+  background-image: url('./components/images/recipeindexbackground.jpeg')
 }
