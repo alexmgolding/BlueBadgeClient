@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const RecipeCreate = (props) => {
     const [ingredients, setIngredients] = useState('');
@@ -11,7 +12,7 @@ const RecipeCreate = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        fetch(`http://localhost:4000/que/${props.category}/submitrecipe`, {
+        fetch(`${APIURL}/que/${props.category}/submitrecipe`, {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',

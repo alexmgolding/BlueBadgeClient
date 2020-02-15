@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import APIURL from '../helpers/environment'
 
 const RecipeEdit = (props) => {
     const [editIngredients, setEditIngredients] = useState(props.recipeToUpdate.ingredients)
@@ -11,7 +12,7 @@ const RecipeEdit = (props) => {
     const updateCurrent = (event) => {
         event.preventDefault()
         console.log(props.recipeToUpdate.id)
-        fetch(`http://localhost:4000/que/${props.category}/update/${props.recipeToUpdate.id}`, {
+        fetch(`${APIURL}/que/${props.category}/update/${props.recipeToUpdate.id}`, {
             method: 'PUT',
             headers: new Headers({
                 'Content-Type': 'application/json',

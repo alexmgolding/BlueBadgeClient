@@ -3,6 +3,7 @@ import { Button, ButtonGroup, Container, Row, Col } from 'reactstrap'
 import RecipeCreate from './RecipeCreate'
 import RecipeTable from './RecipeTable'
 import RecipeEdit from './RecipeEdit'
+import APIURL from '../helpers/environment'
 
 const RecipeIndex = props => {
     const [recipe, setRecipe] = useState([])
@@ -23,7 +24,7 @@ const RecipeIndex = props => {
     }
 
     const fetchRecipes = () => {
-        fetch(`http://localhost:4000/que/${props.category}/getall`, {
+        fetch(`${APIURL}/que/${props.category}/getall`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

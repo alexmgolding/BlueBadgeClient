@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import APIURL from "../helpers/environment"
 
 const Login = (props) => {
     const [username, setUserName] = useState('');
@@ -7,7 +8,7 @@ const Login = (props) => {
 
     let handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:4000/que/user/signin', {
+        fetch(`${APIURL}/que/user/signin`, {
             method: 'POST',
             body: JSON.stringify({ user: { username: username, password: password } }),
             headers: new Headers({ 'Content-Type': 'application/json' })
@@ -20,7 +21,7 @@ const Login = (props) => {
     }
 
     return (
-        <div class="container-fluid">
+        <div className="container-fluid">
             <h1> Login</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
