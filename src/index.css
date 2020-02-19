@@ -5,9 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./components/images/bbq.jpg");
-  background-size: cover; 
-  color: white;
+  background-image: url("./components/images/tablebackground.jpeg");
+  background-size: cover;
 }
 
 code {
@@ -25,8 +24,53 @@ code {
 
 .home-jumbo {
   background-color: transparent;
+  padding: 0px
 }
 
 .recipeIndexBackground {
-  background-image: url('./components/images/recipeindexbackground.jpeg')
+  background-image: transparent
+}
+
+.modal {
+  color: black
+}
+
+.tableName {
+  color: #E8E8E8
+}
+
+.createRecipeHeader {
+  color: #E8E8E8
+}
+
+.label {
+  color: #E8E8E8
+}
+
+.welcome {
+  color: #E8E8E8
+}
+
+.welcomeUsername {
+  color: #E8E8E8
+}
+
+.welcomePassword {
+  color: #E8E8E8
+}
+
+.recipeCreateIngredients{
+  color: #E8E8E8
+}
+
+.recipeCreateRecipe{
+  color: #E8E8E8
+}
+
+.recipeCreateTemp{
+  color: #E8E8E8
+}
+
+.recipeCreateCooktime{
+  color: #E8E8E8
 }

@@ -34,16 +34,16 @@ const RecipeCreate = (props) => {
 
     return (
         <Container>
-            <h2>Recipes</h2>
+            <h2 className="createRecipeHeader">Create Recipes</h2>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmlFor='ingredients' />Ingredients
-                    <Input onChange={(e) => { setIngredients(e.target.value) }} name='ingredients' value={ingredients} >
+                    <Label className="recipeCreateIngredients" className="label" htmlFor='ingredients'>Ingredients</Label>
+                    <Input onChange={(e) => { setIngredients(e.target.value) }} name='text' value={ingredients} type="textarea">
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor='recipe' />Recipe
-                    <Input onChange={(e) => { setRecipe(e.target.value) }} name='recipe' value={recipe}>
+                    <Label className="recipeCreateRecipe" htmlFor='recipe'>Recipe</Label>
+                    <Input onChange={(e) => { setRecipe(e.target.value) }} name='recipe' value={recipe} type="textarea" name="text">
                     </Input>
                 </FormGroup>
                 <FormGroup>
@@ -60,12 +60,12 @@ const RecipeCreate = (props) => {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor='temperature' />Temperature
+                    <Label className="recipeCreateTemp" htmlFor='temperature'>Temperature</Label>
                     <Input onChange={(e) => { setTemperature(e.target.value) }} name='temperature' value={temperature}>
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor='cooktime' />Cooktime
+                    <Label className="recipeCreateCooktime" htmlFor='cooktime'>Cooktime</Label>
                     <Input onChange={(e) => { setCooktime(e.target.value) }} name='cooktime' value={cooktime}>
                     </Input>
                 </FormGroup>

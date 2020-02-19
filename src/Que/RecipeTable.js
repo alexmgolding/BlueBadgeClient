@@ -35,9 +35,9 @@ const RecipeTable = (props) => {
     }
     return (
         <>
-            <h2>Favorite Recipes</h2>
+            <h2 className="tableName">Pitmaster Recipes</h2>
             <hr />
-            <Table striped style={{ background: "#939393" }}>
+            <Table striped style={{ background: "#6C757D" }}>
                 <thead>
                     <tr>
                         <th>#</th>

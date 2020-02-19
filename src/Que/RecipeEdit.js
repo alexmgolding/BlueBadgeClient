@@ -9,6 +9,11 @@ const RecipeEdit = (props) => {
     const [editTemp, setEditTemp] = useState(props.recipeToUpdate.temperature)
     const [editCooktime, setEditCooktime] = useState(props.recipeToUpdate.cooktime)
 
+    function cancelUpdate(event) {
+        event.preventDefault()
+        props.updateOff()
+    }
+
     const updateCurrent = (event) => {
         event.preventDefault()
         console.log(props.recipeToUpdate.id)
@@ -29,11 +34,11 @@ const RecipeEdit = (props) => {
                 <Form>
                     <FormGroup>
                         <Label htmlFor='ingredients'>Update Ingredients</Label>
-                        <Input name='ingredients' value={editIngredients} onChange={(e) => setEditIngredients(e.target.value)} />
+                        <Input name='ingredients' value={editIngredients} onChange={(e) => setEditIngredients(e.target.value)} type="textarea" name="text" />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor='recipe'>Update Recipe</Label>
-                        <Input name='recipe' value={editRecipe} onChange={(e) => setEditRecipe(e.target.value)} />
+                        <Input name='recipe' value={editRecipe} onChange={(e) => setEditRecipe(e.target.value)} type="textarea" name="text" />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor='wood'>Update Type of Wood</Label>
@@ -46,8 +51,10 @@ const RecipeEdit = (props) => {
                     <FormGroup>
                         <Label htmlFor='cooktime'>Update Cooktime</Label>
                         <Input name='cooktime' value={editCooktime} onChange={(e) => setEditCooktime(e.target.value)} />
+                        <br />
+                        <Button type='submit' style={{ background: 'green', margin: "5%" }}>Update Your Recipe</Button>
+                        <Button color="danger" onClick={(e) => cancelUpdate(e)}>Cancel</Button>
                     </FormGroup>
-                    <Button type='submit'>Update Your Recipe</Button>
                 </Form>
             </ModalBody>
         </Modal>

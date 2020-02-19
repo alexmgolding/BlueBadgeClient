@@ -36,8 +36,6 @@ const Home = (props) => {
                             </p>
                         </Jumbotron>
                     </Row>
-                </Container>
-                <Container>
                     <Row>
                         <Col md='2'></Col>
                         <Col md='8'>

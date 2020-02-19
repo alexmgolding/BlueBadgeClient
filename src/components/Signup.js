@@ -23,13 +23,14 @@ const Signup = (props) => {
 
     return (
         <div>
-            <Button color="danger" onClick={toggle}>New User?</Button>
+            <br />
+            <Button style={{ position: "absolute", left: '33px', width: "90px" }} color="success" onClick={toggle}>Register</Button>
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader>SignUp</ModalHeader>
                 <Form onSubmit={handleSubmit}>
                     <ModalBody>
                         <FormGroup>
-                            <Label htmlFor="username">Username</Label>
+                            <Label htmlFor="username">Email</Label>
                             <Input onChange={(e) => setUserName(e.target.value)} name="username" value={username} placeholder="Username" type="email" />
                         </FormGroup>
                         <FormGroup>

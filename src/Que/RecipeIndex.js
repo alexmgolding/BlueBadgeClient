@@ -48,7 +48,7 @@ const RecipeIndex = props => {
             <Row>
                 <Col>
                     <ButtonGroup size="lg">
-                        <Button onClick={() => props.setCategory('beef')}>Beef</Button>
+                        <Button style={{ background: "green" }} onClick={() => props.setCategory('beef')}>Beef</Button>
                         <Button onClick={() => props.setCategory('pork')}>Pork</Button>
                         <Button onClick={() => props.setCategory('poultry')}>Poultry</Button>
                         <Button onClick={() => props.setCategory('seafood')}>Seafood</Button>
