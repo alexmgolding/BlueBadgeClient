@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./components/images/tablebackground.jpeg");
   background-size: cover;
+  font-family: 'Roboto'
 }
 
 code {
@@ -73,4 +74,8 @@ code {
 
 .recipeCreateCooktime{
   color: #E8E8E8
+}
+
+#p {
+  font-family: 'Roboto';
 }

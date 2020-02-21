@@ -10,12 +10,12 @@ const Sitebar = (props) => {
 
     return (
         <Navbar color="faded" light expand="md">
-            <NavbarBrand style={{ color: "white" }} href="/">Happy Grillmore</NavbarBrand>
+            <NavbarBrand style={{ color: "white", fontFamily: 'Bungee Inline' }} href="/">Happy Grillmore</NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className='ml-auto' navbar>
                     <NavItem>
-                        {props.token ? <Button size='lg' onClick={props.clickLogout}>Logout</Button> : null}
+                        {props.token ? <Button size='md' color='danger' onClick={props.clickLogout}>Logout</Button> : null}
                     </NavItem>
                 </Nav>
             </Collapse>

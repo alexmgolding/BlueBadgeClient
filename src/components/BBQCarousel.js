@@ -3,8 +3,7 @@ import {
     Carousel,
     CarouselItem,
     CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
+    CarouselIndicators
 } from 'reactstrap';
 
 const items = [
@@ -48,7 +47,6 @@ const BBQCarousel = (props) => {
                 key={item.src}
             >
                 <img height="600px" src={item.src} alt={item.altText} />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
             </CarouselItem>
         );
     });

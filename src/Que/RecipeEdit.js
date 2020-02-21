@@ -30,7 +30,7 @@ const RecipeEdit = (props) => {
     return (
         <Modal isOpen={true}>
             <ModalHeader>Edit Recipe</ModalHeader>
-            <ModalBody onSubmit={updateCurrent}>
+            <ModalBody onSubmit={updateCurrent} style={{ background: "./components/images/tablebackground.jpeg" }}>
                 <Form>
                     <FormGroup>
                         <Label htmlFor='ingredients'>Update Ingredients</Label>
@@ -52,8 +52,8 @@ const RecipeEdit = (props) => {
                         <Label htmlFor='cooktime'>Update Cooktime</Label>
                         <Input name='cooktime' value={editCooktime} onChange={(e) => setEditCooktime(e.target.value)} />
                         <br />
-                        <Button type='submit' style={{ background: 'green', margin: "5%" }}>Update Your Recipe</Button>
-                        <Button color="danger" onClick={(e) => cancelUpdate(e)}>Cancel</Button>
+                        <Button type='submit' style={{ background: 'green', width: '180px' }}>Update Your Recipe</Button>
+                        <Button color="danger" style={{ width: '89px' }} onClick={(e) => cancelUpdate(e)}>Cancel</Button>
                     </FormGroup>
                 </Form>
             </ModalBody>

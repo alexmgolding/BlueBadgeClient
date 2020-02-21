@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, FormFeedback, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Col, Container, Row } from 'reactstrap';
 import APIURL from "../helpers/environment"
 
 const Login = (props) => {
@@ -27,22 +27,30 @@ const Login = (props) => {
     }
 
     return (
-        <div className="container-fluid">
-            <h1 className="welcome">Welcome Back</h1>
-            <Form onSubmit={handleSubmit}>
-                {errorMessage == '' ? <> </> : <div style={{ background: "red" }} className="alert alert-danger" role="alert">
-                    Username and password combination is incorrect. Please try again.</div>}
-                < FormGroup >
-                    <Label className="welcomeUsername" htmlFor="username">Username</Label>
-                    <Input onChange={(e) => setUserName(e.target.value)} name="username" value={username} placeholder="Username" />
-                </FormGroup>
-                <FormGroup>
-                    <Label className="welcomePassword" htmlFor="password">Password</Label>
-                    <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="Password" type="password" />
-                </FormGroup>
-                <Button style={{ width: "90px", alignitems: 'left' }} type="submit" >Login</Button>
-            </Form>
-        </div >
+        <Container>
+            <Row>
+                <Col>
+                    <br />
+                    <p style={{ color: '#E8E8E8', fontFamily: 'Titillium Web' }}>Here at Happy Grillmore we are backyard barbecuers, grilling enthusiasts, and foodies creating a community to share recipes with each other. If you would like to join Happy Grillmore please register below!  </p>
+                </Col>
+                <Col>
+                    <Form onSubmit={handleSubmit}>
+                        {errorMessage == '' ? <> </> : <div style={{ background: "red" }} className="alert alert-danger" role="alert">
+                            Username and password combination is incorrect. Please try again.</div>}
+                        < FormGroup >
+                            <h2 style={{ color: '#E8E8E8' }}>Login</h2>
+                            <Label className="welcomeUsername" htmlFor="username">Username</Label>
+                            <Input onChange={(e) => setUserName(e.target.value)} name="username" value={username} placeholder="Username" />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label className="welcomePassword" htmlFor="password">Password</Label>
+                            <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="Password" type="password" />
+                        </FormGroup>
+                        <Button style={{ width: "90px", alignitems: 'left' }} type="submit" >Login</Button>
+                    </Form>
+                </Col>
+            </Row>
+        </Container >
     )
 }
 export default Login;

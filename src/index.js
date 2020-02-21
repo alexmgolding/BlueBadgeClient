@@ -4,6 +4,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import WebFontLoader from 'webfontloader'
+
+WebFontLoader.load({
+    google: {
+        families: [
+            'Bungee Inline',
+            'Faster One'
+        ]
+    }
+})
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

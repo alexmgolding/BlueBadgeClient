@@ -34,7 +34,8 @@ const RecipeCreate = (props) => {
 
     return (
         <Container>
-            <h2 className="createRecipeHeader">Create Recipes</h2>
+            <br />
+            <h2 className="createRecipeHeader"> {props.category} Recipe</h2>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label className="recipeCreateIngredients" className="label" htmlFor='ingredients'>Ingredients</Label>
@@ -60,8 +61,8 @@ const RecipeCreate = (props) => {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="recipeCreateTemp" htmlFor='temperature'>Temperature</Label>
-                    <Input onChange={(e) => { setTemperature(e.target.value) }} name='temperature' value={temperature}>
+                    <Label className="recipeCreateTemp" htmlFor='temperature'>Temperature ºF</Label>
+                    <Input onChange={(e) => { setTemperature(e.target.value) }} name='temperature'>
                     </Input>
                 </FormGroup>
                 <FormGroup>
@@ -69,7 +70,7 @@ const RecipeCreate = (props) => {
                     <Input onChange={(e) => { setCooktime(e.target.value) }} name='cooktime' value={cooktime}>
                     </Input>
                 </FormGroup>
-                <Button type='submit'>Submit Recipe</Button>
+                <Button color="success" type='submit'>Submit Recipe</Button>
             </Form>
         </Container>
     )

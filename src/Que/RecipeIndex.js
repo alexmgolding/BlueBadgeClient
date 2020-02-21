@@ -48,11 +48,11 @@ const RecipeIndex = props => {
             <Row>
                 <Col>
                     <ButtonGroup size="lg">
-                        <Button style={{ background: "green" }} onClick={() => props.setCategory('beef')}>Beef</Button>
-                        <Button onClick={() => props.setCategory('pork')}>Pork</Button>
-                        <Button onClick={() => props.setCategory('poultry')}>Poultry</Button>
-                        <Button onClick={() => props.setCategory('seafood')}>Seafood</Button>
-                        <Button onClick={() => props.setCategory('vegetable')}>Vegetables</Button>
+                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Beef')}>Beef</Button>
+                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Pork')}>Pork</Button>
+                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Poultry')}>Poultry</Button>
+                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Seafood')}>Seafood</Button>
+                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Vegetable')}>Vegetables</Button>
                     </ButtonGroup>
                 </Col>
             </Row>
