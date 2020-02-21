@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button, Col, Container, Row } from 'reactstrap';
 import APIURL from "../helpers/environment"
+import Signup from './Signup'
+
 
 const Login = (props) => {
     const [username, setUserName] = useState('');
@@ -31,7 +33,8 @@ const Login = (props) => {
             <Row>
                 <Col>
                     <br />
-                    <p style={{ color: '#E8E8E8', fontFamily: 'Titillium Web' }}>Here at Happy Grillmore we are backyard barbecuers, grilling enthusiasts, and foodies creating a community to share recipes with each other. If you would like to join Happy Grillmore please register below!  </p>
+                    <p style={{ color: '#E8E8E8' }}>Here at Happy Grillmore we are backyard barbecuers, grilling enthusiasts, and foodies creating a community to share recipes with each other. If you would like to join Happy Grillmore please register below! </p>
+                    <Signup updateToken={props.updateToken} />
                 </Col>
                 <Col>
                     <Form onSubmit={handleSubmit}>

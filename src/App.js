@@ -5,7 +5,7 @@ import Home from './components/Home'
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
-  const [category, setCategory] = useState('beef')
+  const [category, setCategory] = useState('Beef')
 
 
   useEffect(() => {

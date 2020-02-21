@@ -6,6 +6,7 @@ const Signup = (props) => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [modal, setModal] = useState(false)
+
     const toggle = () => setModal(!modal)
 
     let handleSubmit = (event) => {
@@ -23,8 +24,7 @@ const Signup = (props) => {
 
     return (
         <div>
-            <br />
-            <Button style={{ position: "absolute", left: '33px', width: "90px" }} color="success" onClick={toggle}>Register</Button>
+            <Button style={{ width: "90px" }} color="success" onClick={toggle}>Register</Button>
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader>SignUp</ModalHeader>
                 <Form onSubmit={handleSubmit}>
