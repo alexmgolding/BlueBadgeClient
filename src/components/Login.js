@@ -33,12 +33,12 @@ const Login = (props) => {
             <Row>
                 <Col>
                     <br />
-                    <p style={{ color: '#E8E8E8' }}>Here at Happy Grillmore we are backyard barbecuers, grilling enthusiasts, and foodies creating a community to share recipes with each other. If you would like to join Happy Grillmore please register below! </p>
+                    <p style={{ fontSize: '25px', color: '#E8E8E8' }}>Here at Happy Grillmore we are backyard barbecuers, grilling enthusiasts, and foodies creating a community to share recipes with each other. If you would like to join Happy Grillmore please register below! </p>
                     <Signup updateToken={props.updateToken} />
                 </Col>
                 <Col>
                     <Form onSubmit={handleSubmit}>
-                        {errorMessage == '' ? <> </> : <div style={{ background: "red" }} className="alert alert-danger" role="alert">
+                        {errorMessage === '' ? <> </> : <div style={{ background: "red" }} className="alert alert-danger" role="alert">
                             Username and password combination is incorrect. Please try again.</div>}
                         < FormGroup >
                             <h2 style={{ color: '#E8E8E8' }}>Login</h2>

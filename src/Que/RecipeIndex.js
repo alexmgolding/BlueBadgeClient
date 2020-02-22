@@ -48,11 +48,11 @@ const RecipeIndex = props => {
             <Row>
                 <Col>
                     <ButtonGroup size="lg">
-                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Beef')}>Beef</Button>
-                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Pork')}>Pork</Button>
-                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Poultry')}>Poultry</Button>
-                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Seafood')}>Seafood</Button>
-                        <Button style={{ background: 'gray', width: '190px' }} onClick={() => props.setCategory('Vegetable')}>Vegetables</Button>
+                        <Button style={{ background: '#8D9292', width: '190px' }} onClick={() => props.setCategory('Beef')}>Beef</Button>
+                        <Button style={{ background: '#8D9292', width: '190px' }} onClick={() => props.setCategory('Pork')}>Pork</Button>
+                        <Button style={{ background: '#8D9292', width: '190px' }} onClick={() => props.setCategory('Poultry')}>Poultry</Button>
+                        <Button style={{ background: '#8D9292', width: '190px' }} onClick={() => props.setCategory('Seafood')}>Seafood</Button>
+                        <Button style={{ background: '#8D9292', width: '190px' }} onClick={() => props.setCategory('Vegetable')}>Vegetables</Button>
                     </ButtonGroup>
                 </Col>
             </Row>

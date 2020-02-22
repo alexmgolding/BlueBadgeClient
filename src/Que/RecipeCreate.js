@@ -36,14 +36,16 @@ const RecipeCreate = (props) => {
         <Container>
             <br />
             <h2 className="createRecipeHeader"> {props.category} Recipe</h2>
+            {props.category === 'Seafood' ? <Button color='success'><a target='blank' style={{ color: 'white' }} href='https://jl-fishbook-app-log.herokuapp.com/'>Post your catch on FishBook!</a></Button> : null}
+            <br />
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label className="recipeCreateIngredients" className="label" htmlFor='ingredients'>Ingredients</Label>
+                    <Label className="recipeCreateIngredients" className="label" htmlFor='ingredients' style={{ fontSize: '25px' }}>Ingredients</Label>
                     <Input onChange={(e) => { setIngredients(e.target.value) }} name='text' value={ingredients} type="textarea">
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="recipeCreateRecipe" htmlFor='recipe'>Recipe</Label>
+                    <Label className="recipeCreateRecipe" htmlFor='recipe' style={{ fontSize: '25px' }}>Recipe</Label>
                     <Input onChange={(e) => { setRecipe(e.target.value) }} name='recipe' value={recipe} type="textarea" name="text">
                     </Input>
                 </FormGroup>
@@ -61,16 +63,18 @@ const RecipeCreate = (props) => {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="recipeCreateTemp" htmlFor='temperature'>Temperature ºF</Label>
+                    <Label className="recipeCreateTemp" htmlFor='temperature' style={{ fontSize: '25px' }}>Temperature ºF</Label>
                     <Input onChange={(e) => { setTemperature(e.target.value) }} name='temperature'>
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="recipeCreateCooktime" htmlFor='cooktime'>Cooktime</Label>
+                    <Label className="recipeCreateCooktime" htmlFor='cooktime' style={{ fontSize: '25px' }}>Cooktime</Label>
                     <Input onChange={(e) => { setCooktime(e.target.value) }} name='cooktime' value={cooktime}>
                     </Input>
                 </FormGroup>
                 <Button color="success" type='submit'>Submit Recipe</Button>
+                <br />
+                <br />
             </Form>
         </Container>
     )

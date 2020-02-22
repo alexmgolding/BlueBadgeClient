@@ -19,12 +19,12 @@ const RecipeTable = (props) => {
         return props.recipe.map((que, index) => {
             return (
                 <tr key={index}>
-                    <th style={{ color: '#EAE2B7' }} scope="row">{que.id}</th>
-                    <td style={{ color: '#EAE2B7' }}>{que.ingredients}</td>
-                    <td style={{ color: '#EAE2B7' }}>{que.recipe}</td>
-                    <td style={{ color: '#EAE2B7' }}>{que.wood}</td>
-                    <td style={{ color: '#EAE2B7' }}>{que.temperature}</td>
-                    <td style={{ color: '#EAE2B7' }}>{que.cooktime}</td>
+                    <th style={{ color: '#E8E8E8' }} scope="row">{que.id}</th>
+                    <td style={{ color: '#E8E8E8' }}>{que.ingredients}</td>
+                    <td style={{ color: '#E8E8E8' }}>{que.recipe}</td>
+                    <td style={{ color: '#E8E8E8' }}>{que.wood}</td>
+                    <td style={{ color: '#E8E8E8' }}>{que.temperature}</td>
+                    <td style={{ color: '#E8E8E8' }}>{que.cooktime}</td>
                     <td>
                         <Button color="warning" onClick={() => { props.editRecipe(que); props.updateOn() }}>Update</Button>
                         <Button color="danger" style={{ width: '75px' }} onClick={() => { deleteRecipe(que) }}>Delete</Button>
@@ -36,15 +36,15 @@ const RecipeTable = (props) => {
     return (
         <>
             <h2 className="tableName">Pitmaster Recipes</h2>
-            <Table striped style={{ background: "#838795" }}>
+            <Table striped style={{ background: "#7C8282" }}>
                 <thead>
                     <tr>
-                        <th style={{ color: '#EAE2B7', fontFamily: 'Roboto' }}>#</th>
-                        <th style={{ color: '#EAE2B7', fontFamily: 'Roboto' }}>Ingredients</th>
-                        <th style={{ color: '#EAE2B7', fontFamily: 'Roboto' }}>Recipe</th>
-                        <th style={{ color: '#EAE2B7', fontFamily: 'Roboto' }}>Wood</th>
-                        <th style={{ color: '#EAE2B7', fontFamily: 'Roboto' }}>Temperature</th>
-                        <th style={{ color: '#EAE2B7', fontFamily: 'Roboto' }}>Cooktime</th>
+                        <th style={{ color: '#E8E8E8', fontFamily: 'Roboto', fontSize: '25px' }}>#</th>
+                        <th style={{ color: '#E8E8E8', fontFamily: 'Roboto', fontSize: '25px' }}>Ingredients</th>
+                        <th style={{ color: '#E8E8E8', fontFamily: 'Roboto', fontSize: '25px' }}>Recipe</th>
+                        <th style={{ color: '#E8E8E8', fontFamily: 'Roboto', fontSize: '25px' }}>Wood</th>
+                        <th style={{ color: '#E8E8E8', fontFamily: 'Roboto', fontSize: '25px' }}>Temperature</th>
+                        <th style={{ color: '#E8E8E8', fontFamily: 'Roboto', fontSize: '25px' }}>Cooktime</th>
                     </tr>
                 </thead>
                 <tbody>

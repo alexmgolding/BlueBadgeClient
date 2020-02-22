@@ -5,7 +5,7 @@ import RecipeIndex from '../Que/RecipeIndex'
 
 const Home = (props) => {
     const [sessionToken, setSessionToken] = useState(props.token)
-    const [category, setCategory] = useState('beef')
+    const [category, setCategory] = useState('Beef')
     const [landingPage, setLandingPage] = useState(true)
 
     const updateToken = (newToken) => {
@@ -27,10 +27,11 @@ const Home = (props) => {
                 <Container>
                     <Row>
                         <Jumbotron className="home-jumbo" style={{ color: "white" }}>
-                            <h1>Welcome to Happy Grillmore</h1>
-                            <p>At Happy Grillmore we pride ourselves by compiling different recipes from different categories to enhance everyone's backyard barbecue experience.</p>
-                            <hr />
-                            <p>Please take a look around our recipes and feel free to submit your own award winning recipe. Enjoy!</p>
+                            <h1 col='8'>Welcome to Happy Grillmore</h1>
+                            <p style={{ fontSize: '20px' }}>At Happy Grillmore we pride ourselves by compiling different recipes from different categories to enhance everyone's backyard barbecue experience. Feel free to get inspired to try new recipes to futher your creativity as a backyard chef.
+                            <br />
+                                <br />
+                                Please take a look around our recipes and feel free to submit your own award winning recipe. Enjoy!</p>
                             <p>
                                 <Button color="secondary" type="submit" onClick={() => recipeTables()}>View Recipes</Button>
                             </p>
