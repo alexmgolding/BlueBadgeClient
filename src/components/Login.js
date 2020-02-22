@@ -38,7 +38,7 @@ const Login = (props) => {
                 </Col>
                 <Col>
                     <Form onSubmit={handleSubmit}>
-                        {errorMessage === '' ? <> </> : <div style={{ background: "red" }} className="alert alert-danger" role="alert">
+                        {errorMessage == '' ? <> </> : <div style={{ background: "red", color: 'white' }} className="alert alert-danger" role="alert">
                             Username and password combination is incorrect. Please try again.</div>}
                         < FormGroup >
                             <h2 style={{ color: '#E8E8E8' }}>Login</h2>
